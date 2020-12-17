@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import KushyApi from '../KushyApi';
 
+// 기타공지 hyperlink 달기
+
 const steps = [
           {
             id: '1',
-            message: '안녕하세요 한세대학교 챗봇입니다. :) 이름이 무엇인가요?',
+            message: '한세대학교 챗봇입니다 :) 학우님의 이름을 입력해주세요.',
             trigger: 'name',
           },
           {
@@ -20,7 +22,7 @@ const steps = [
           },
           {
             id: '5',
-            message: 'Placholder',
+            message: '기타 공지는 https://portal.hansei.ac.kr 참조하시길 바랍니다. ',
             trigger: 'sections',
           },
           {
@@ -55,12 +57,8 @@ const steps = [
           {
             id: 'concentrates',
             options: [
-              { value: 'bubble hash', label: '신청 기간', trigger: '150' },
-              { value: 'crumble', label: '신청 방법', trigger: '151' },
-              { value: 'kief', label: 'Kief', trigger: '150' },
-              { value: 'oil', label: 'Oil', trigger: '150' },
-              { value: 'shatter', label: 'Shatter', trigger: '150' },
-              { value: 'wax', label: 'Wax', trigger: '150' },
+              { value: 'time', label: '신청 기간', trigger: '150' },
+              { value: 'way', label: '신청 방법', trigger: '151' },
             ],
           },
           {
