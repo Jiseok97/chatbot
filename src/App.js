@@ -9,6 +9,7 @@ import "./assets/css/main.css";
 import "./assets/css/bootstrap-grid.min.css";
 import chat_styles from "./config/chatstyles";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./Componet/Footer";
 
 const formSubmit = (e) => {
   e.preventDefault();
@@ -37,7 +38,7 @@ class App extends Component {
               <ThemeProvider theme={chat_styles}>
                 <ChatBot
                   steps={steps}
-                  headerTitle="Hansei - Bot! Tell me Something"
+                  headerTitle="Please Bot! Tell me Something"
                   placeholder="내용을 입력해주세요"
                   customDelay="500"
                   botAvatar={Hansei}
@@ -48,11 +49,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <footer className="Footer">
-          <p className="copy">From Bitcoin-Team.</p>
-          {/* <p className="copy">Created by <a href="http://stayregular.net" className="stayregular"><img src={logo_stayregular} alt="Stay Regular" /></a> using the <a href="http://kushy.net" className="kushyapi"><img src={logo_kushyapi} alt="Kushy API" /></a>.</p> */}
-          {/* <p className="credit">Shoutout to <a href="https://lucasbassetti.com.br/react-simple-chatbot/" className="chatbot"><img src={logo_chatbot} alt="React Simple Chatbot" /></a>.</p> */}
-        </footer>
+        <footer className="Footer">{/* <Footer /> */}</footer>
       </div>
     );
   }

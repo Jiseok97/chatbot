@@ -1,40 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>한세대학교 챗봇</title>
+    <title>한세 챗봇 BTS</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <footer class="page-footer bg-dark">
+      <div calss="container text-center text-md-left mt-5">
+        <div class="row">
+          <div class="col-md-3 mx-auto mb-4">
+            <h6 clas="text-uppercase font-weight-bold">Chatbot - BTS</h6>
+            <hr
+              class="bg-primary mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 125px; height: 2px"
+            />
+            <p class="mt-2">
+              한세대학교 비트 고급에서 진행된 프로젝트입니다. <br />Chatbot
+              서비스는 한세대학교 공지 등이 포함되어있습니다.
+            </p>
+          </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+          <div class="col-md-2 mx-auto mb-4">
+            <h6 clas="text-uppercase font-weight-bold">학교 소개</h6>
+            <hr
+              class="bg-primary mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 85px; height: 2px"
+            />
+            <ul class="list-unstyled">
+              <li class="my-2">홈페이지: https://www.hansei.ac.kr</li>
+              <li class="my-2">주소: 경기도 군포시 한세로 30</li>
+              <li class="my-2">전화 번호: 031-450-5114</li>
+            </ul>
+          </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <div class="col-md-2 mx-auto mb-4">
+            <h6 clas="text-uppercase font-weight-bold">챗봇 데이터</h6>
+            <hr
+              class="bg-primary mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 100px; height: 2px"
+            />
+            <ul class="list-unstyled">
+              <li class="my-2">학교 정보 & 공지 사항</li>
+              <li class="my-2">장학금 & 수강 신청</li>
+              <li class="my-2">학식 메뉴</li>
+              <li class="my-2">교내 행사</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4">
+            <h6 clas="text-uppercase font-weight-bold">개발자</h6>
+            <hr
+              class="bg-primary mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 100px; height: 2px"
+            />
+            <ul class="list-unstyled">
+              <li class="my-2">
+                <i class="fas fa-home"></i> Korean, Hansei.Univ
+              </li>
+              <li class="my-2">
+                <i class="far fa-envelope"></i> wltjr****@naver.com
+              </li>
+              <li class="my-2">
+                <i class="fas fa-phone"></i> +82 10 9820 ****
+              </li>
+              <li class="my-2"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright text-center py-3">
+        <p>
+          &copy; Hansei.Uinv | Bit_BTS | Chatbot - service | Chatbot project
+        </p>
+      </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"
+    ></script>
   </body>
 </html>
