@@ -9,12 +9,11 @@ import "./assets/css/main.css";
 import "./assets/css/bootstrap-grid.min.css";
 import chat_styles from "./config/chatstyles";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./Componet/Footer";
 
-const formSubmit = (e) => {
-  e.preventDefault();
-  alert("도움말 내용");
-};
+// const formSubmit = (e) => {
+//   e.preventDefault();
+//   alert("도움말 내용");
+// };
 
 class App extends Component {
   render() {
@@ -23,10 +22,10 @@ class App extends Component {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-md">
             <a class="navbar-brand" href="/">
-              <h2>한세대학교 BTS</h2>
+              <h2>한세 Chatbot - BTS</h2>
             </a>
             <form class="d-flex">
-              <button type="button" class="btn btn-dark" type="submit">
+              <button type="button" class="btn btn-dark">
                 도움말
               </button>
             </form>
