@@ -10,6 +10,11 @@ import "./assets/css/bootstrap-grid.min.css";
 import chat_styles from "./config/chatstyles";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const formSubmit = (e) => {
+  e.preventDefault();
+  alert("도움말 내용");
+};
+
 class App extends Component {
   render() {
     return (
@@ -20,14 +25,8 @@ class App extends Component {
               <h2>한세대학교 BTS</h2>
             </a>
             <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="검색..."
-                aria-label="Search"
-              />
-              <button type="button" class="btn btn-secondary" type="submit">
-                Search
+              <button type="button" class="btn btn-dark" type="submit">
+                도움말
               </button>
             </form>
           </div>

@@ -1,8 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 body {
-  background: url("../images/HanseiUniv.PNG") center fixed no-repeat;
+  background-image: url("../images/HanseiUniv.PNG") fixed no-repeat;
   background-size: cover;
+  background-position: center center;
+  transition: 5s;
+  animation-name: animate;
+  animation-direction: reverse;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(../images/HanseiUniv.PNG);
+  }
+  50% {
+    background-image: url(../images/HanseiUniv2.png);
+  }
+  100% {
+    background-image: url(../images/HanseiUniv3.png);
+  }
 }
 
 .App {
