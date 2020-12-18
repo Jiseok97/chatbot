@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import steps from "./config/teststeps";
+import steps from "./config/steps";
 import "./App.css";
 import Hansei from "./assets/images/Hansei.PNG";
 import user from "./assets/images/user.PNG";
@@ -10,12 +10,13 @@ import "./assets/css/bootstrap-grid.min.css";
 import chat_styles from "./config/chatstyles";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// const formSubmit = (e) => {
-//   e.preventDefault();
-//   alert("도움말 내용");
-// };
-
 class App extends Component {
+  ButtonOnClick(event) {
+    event.preventDefault();
+    alert(
+      "처음화면으로 돌아가길 원하시면 ☜(왼쪽)에 있는 Title을 눌러주세요. \n궁금하신 내용을 아래 입력란에 입력해보세요 :)"
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -25,7 +26,11 @@ class App extends Component {
               <h2>한세 Chatbot - BTS</h2>
             </a>
             <form class="d-flex">
-              <button type="button" class="btn btn-dark">
+              <button
+                type="button"
+                class="btn btn-dark"
+                onClick={this.ButtonOnClick}
+              >
                 도움말
               </button>
             </form>
@@ -38,7 +43,7 @@ class App extends Component {
                 <ChatBot
                   steps={steps}
                   headerTitle="Please Bot! Tell me Something"
-                  placeholder="내용을 입력해주세요"
+                  placeholder="내용을 입력해주세요..."
                   customDelay="500"
                   botAvatar={Hansei}
                   userAvatar={user}
@@ -48,7 +53,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <footer className="Footer">{/* <Footer /> */}</footer>
+        <footer className="Footer" />
       </div>
     );
   }

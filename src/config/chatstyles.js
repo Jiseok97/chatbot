@@ -1,13 +1,13 @@
 const chat_styles = {
   background: "#f5f8fb",
   fontFamily: "Helvetica Neue",
-  headerBgColor: "rgb(0, 0, 0)",
+  headerBgColor: "rgb(60, 60, 60)",
   headerFontColor: "#fff",
   headerFontFamily: "Montseratt",
-  botBubbleColor: "rgb(0,0,0)",
-  botFontColor: "#fff",
-  userBubbleColor: "#fff",
-  userFontColor: "#4a4a4a",
+  botBubbleColor: "#fff",
+  botFontColor: "rgb(0,0,0)",
+  userBubbleColor: "rgb(60,60,60)",
+  userFontColor: "#fff",
 };
 
 export default chat_styles;
