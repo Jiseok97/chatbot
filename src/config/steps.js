@@ -20,7 +20,7 @@ const steps = [
   },
   {
     id: "3",
-    message: "반갑습니다. {previousValue}학우님, 공지 분류를 보시겠습니까?",
+    message: "반갑습니다. {previousValue}학우님, 안내해도 될까요?",
     trigger: "yes",
   },
   {
