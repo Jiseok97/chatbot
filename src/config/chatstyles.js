@@ -1,5 +1,5 @@
 const chat_styles = {
-  background: "#f5f8fb",
+  background: "rgb(200,200,200)",
   fontFamily: "Helvetica Neue",
   headerBgColor: "rgb(60, 60, 60)",
   headerFontColor: "#fff",

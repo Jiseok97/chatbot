@@ -176,7 +176,7 @@ export default class KushyApi extends Component {
 
     return (
       <div className="kushy_results">
-        {loading ? "Loading" : result.msg}
+        {loading ? "챗봇을 종료합니다." : result.msg}
         {loading ? "" : result.list}
         {!loading && (
           <div

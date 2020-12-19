@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Login from "./Login";
-import fire from "./fire";
+import fire from "../fire";
 import "./App.css";
 import Hero from "./Hero";
 

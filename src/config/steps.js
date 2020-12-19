@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import KushyApi from "../KushyApi";
+import s from "../assets/images/HanseiLogo.png";
 
 const steps = [
   {
@@ -20,7 +21,8 @@ const steps = [
   },
   {
     id: "3",
-    message: "반갑습니다. {previousValue}학우님, 안내해도 될까요?",
+    message:
+      "반갑습니다. {previousValue}학우님, 학교 공지에 관련하여 안내해도 될까요?",
     trigger: "yes",
   },
   {
@@ -58,7 +60,7 @@ const steps = [
     options: [
       {
         value: "scholarship101",
-        label: "Hansei Achivement Point",
+        label: "Hansei Achievement Point",
         trigger: "achievement",
       },
       {
@@ -133,6 +135,11 @@ const steps = [
         value: "scholarship101-3",
         label: "신청대상자",
         trigger: "scholarship101-3",
+      },
+      {
+        value: "exit",
+        label: "종료",
+        trigger: "ending",
       },
     ],
   },

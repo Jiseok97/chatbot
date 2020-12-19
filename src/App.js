@@ -14,9 +14,10 @@ class App extends Component {
   ButtonOnClick(event) {
     event.preventDefault();
     alert(
-      "처음화면으로 돌아가길 원하시면 ☜(왼쪽)에 있는 Title을 눌러주세요. \n궁금하신 내용을 아래 입력란에 입력해보세요 :)"
+      '첫 화면으로 돌아가길 원하시면 "처음으로" 버튼을 눌러주세요. \n궁금하신 내용을 아래 입력란에 입력해보세요 :)'
     );
   }
+
   render() {
     return (
       <div className="App">
@@ -26,6 +27,9 @@ class App extends Component {
               <h2>한세 Chatbot - BTS</h2>
             </a>
             <form class="d-flex">
+              <a href="/" type="button" class="btn btn-dark">
+                처음으로
+              </a>
               <button
                 type="button"
                 class="btn btn-dark"
