@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import KushyApi from "../KushyApi";
-import s from "../assets/images/HanseiLogo.png";
 
 const steps = [
   {
