@@ -10,47 +10,27 @@ const steps = [
   },
   {
     id: "2",
-    message: "학우님의 이름을 입력해주세요 :)",
-    trigger: "name",
-  },
-  {
-    id: "name",
-    user: true,
-    trigger: "3",
-  },
-  {
-    id: "3",
-    message:
-      "반갑습니다. {previousValue}학우님, 학교 공지에 관련하여 안내해도 될까요?",
-    trigger: "yes",
-  },
-  {
-    id: "yes",
-    user: true,
-    trigger: "submessage",
-  },
-  {
-    id: "submessage",
     message: "공지 분류는 아래와 같습니다. 선택해주세요 :)",
     trigger: "sections",
   },
   {
     id: "sections",
     options: [
-      { value: "scholarship", label: "장학금", trigger: "100" },
-      { value: "class", label: "수강 신청", trigger: "class" },
+      { value: "scholarship", label: "장학금", trigger: "scholarship1" },
       { value: "cafeteria", label: "학식", trigger: "cafeteria" },
       { value: "army", label: "예비군", trigger: "army" },
       { value: "club", label: "동아리", trigger: "club" },
+      { value: "studentas", label: "학교기관", trigger: "studentas" },
       { value: "festival", label: "교내행사", trigger: "festival" },
       { value: "university", label: "학교정보", trigger: "university" },
-      { value: "studentas", label: "학교기관", trigger: "studentas" },
+      { value: "schoolinfo", label: "학사정보", trigger: "schoolinfo" },
+      { value: "dormitory", label: "기숙사", trigger: "dormitory" },
     ],
   },
 
   ///////////////////////////////////장학금/////////////////////////////////
   {
-    id: "100",
+    id: "scholarship1",
     message: "어떤 장학금을 찾으시나요?",
     trigger: "scholarship",
   },
@@ -59,108 +39,179 @@ const steps = [
     options: [
       {
         value: "scholarship101",
-        label: "Hansei Achievement Point",
-        trigger: "achievement",
+        label: "성적장학금",
+        trigger: "scholarship101",
       },
       {
         value: "scholarship102",
-        label: "성적장학금",
+        label: "Hansei Advance 장학금",
         trigger: "scholarship102",
       },
       {
         value: "scholarship103",
-        label: "봉사장학금",
+        label: "신입생장학금",
         trigger: "scholarship103",
       },
       {
         value: "scholarship104",
-        label: "Hansei Advance장학금",
+        label: "근로장학금",
         trigger: "scholarship104",
       },
       {
         value: "scholarship105",
-        label: "신입생장학금",
+        label: "군종사관후보생장학금",
         trigger: "scholarship105",
       },
       {
         value: "scholarship106",
-        label: "언론장학금",
+        label: "공로장학금",
         trigger: "scholarship106",
       },
       {
         value: "scholarship107",
-        label: "자격증 관련 장학금",
+        label: "외부장학금",
         trigger: "scholarship107",
       },
       {
         value: "scholarship108",
-        label: "근로장학금",
+        label: "특별장학금",
         trigger: "scholarship108",
       },
       {
         value: "scholarship109",
-        label: "국가장학금",
+        label: "영산장학금",
         trigger: "scholarship109",
       },
       {
         value: "scholarship110",
-        label: "공로장학금",
+        label: "희망장학금",
+        trigger: "scholarship110",
+      },
+
+      {
+        value: "scholarship110",
+        label: "엑설런스장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "비트장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "글로벌사회봉사장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "국가고시장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "교직원자녀장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "봉사장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "언론장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "보훈장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "국가고시장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "한세가족장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "편입생장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "외국어장학금A",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "외국어장학금B",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "Hansei Achievement Point",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "장애학생장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "다문화가정장학금",
+        trigger: "scholarship110",
+      },
+      {
+        value: "scholarship110",
+        label: "만학도장학금",
         trigger: "scholarship110",
       },
       { value: "ending", label: "종료", trigger: "ending" },
     ],
   },
 
-  // Hansei Achievement Point 관련 정보
-  {
-    id: "achievement",
-    message: "Hansei Achievement Point 관련 정보 중 선택해주세요 :)",
-    trigger: "scholarship101",
-  },
+  // 성적장학금 정보
   {
     id: "scholarship101",
-    options: [
-      {
-        value: "scholarship101-1",
-        label: "신청 기간",
-        trigger: "scholarship101-1",
-      },
-      {
-        value: "scholarship101-2",
-        label: "신청 방법",
-        trigger: "scholarship101-2",
-      },
-      {
-        value: "scholarship101-3",
-        label: "신청대상자",
-        trigger: "scholarship101-3",
-      },
-      {
-        value: "exit",
-        label: "종료",
-        trigger: "ending",
-      },
-    ],
+    message: "성적장학금 정보입니다",
+    trigger: "101",
   },
   {
-    id: "scholarship101-1",
+    id: "101",
+    message: "신청기간 및 방법 : 별도신청없음",
+    trigger: "102",
+  },
+  {
+    id: "102",
+    message: "지급 및 선발기준 : 직전학기 각 학부별 등록금 수입의 3.33% 배정",
+    trigger: "103",
+  },
+  {
+    id: "103",
     message:
-      "Hansei Achievement Point 신청 기간은 2020년 11월 13일(금) ~ 2020년 12월 03일(목)까지 입니다.",
-    trigger: "scholarship101",
+      "지급인원은 각 전공별 재학인원의 8%이내 지급 -- (소수점 인원은 반올림)",
+    trigger: "104",
   },
   {
-    id: "scholarship101-2",
+    id: "104",
+    message: "직전학기성적 3.5이상인 자",
+    trigger: "105",
+  },
+  {
+    id: "105",
     message:
-      "Hansei Achievement Point 신청 방법은 다음과 같습니다. 학사행정 → 서비스 → 학생서비스 → 장학관리 → Hansei Achievement 적립신청 → " +
-      "해당학년 및 학기 확인 → 추가 → 포인트신청상세 입력 → 저장 → 근거서류 파일첨부 → 저장 →  체크박스 체크 → 신청버튼 → 팝업창 입니다. 이전 페이지로 돌아가시겠습니까?",
-    trigger: "scholarship101",
-  },
-  {
-    id: "scholarship101-3",
-    message: "Hansei Achievement Point 신청 대상자는 다음과 같습니다.",
-    trigger: "scholarship101",
+      "타 장학금 추가 수혜 및 장학기준(제7조, 제9조) 미달 및 학적 변동 등의 사유 발생시 다음 순위로 승계 가능",
+    trigger: "scholarship",
   },
 
+  // Hansei Advance 장학금
   {
     id: "scholarship102",
     options: [
@@ -493,73 +544,67 @@ const steps = [
     ],
   },
 
-  ///////////////////////////////////수강신청/////////////////////////////////
-  {
-    id: "class",
-    message: "수강신청 관련 정보는 다음과 같습니다.",
-    trigger: "classes",
-  },
-
-  {
-    id: "classes",
-    options: [
-      { value: "class101", label: "수강신청기간", trigger: "class101" },
-      { value: "class101", label: "방법", trigger: "class101" },
-      { value: "class101", label: "수업정보", trigger: "class101" },
-      { value: "ending", label: "종료", trigger: "ending" },
-    ],
-  },
-  {
-    id: "class101",
-    options: [
-      { value: "class101-1", label: "예비수강신청", trigger: "class101-1" },
-      { value: "class101-2", label: "본수강신청", trigger: "class101-2" },
-      { value: "class101-3", label: "수강신청 방법", trigger: "class101-3" },
-    ],
-  },
-
-  {
-    id: "class101-1",
-    message: "예비수강신청 기간 2/14~2/22 입니다",
-    trigger: "class101",
-  },
-  {
-    id: "class101-2",
-    message: "본수강신청 기간 2/23~2/28 입니다",
-    trigger: "class101",
-  },
-  {
-    id: "class101-3",
-    message: "채플을 필수로 들어야 합니다",
-    trigger: "class101",
-  },
-
   ///////////////////////////////////학식/////////////////////////////////
   {
     id: "cafeteria",
     options: [
       { value: "menu", label: "메뉴", trigger: "menu" },
       { value: "cafeteriainfo", label: "정보", trigger: "cafeteriainfo" },
-      { value: "ending", label: "종료", trigger: "ending" },
+      { value: "ending", label: "운영시간", trigger: "cafeteriatime" },
     ],
   },
   {
     id: "menu",
-    message: "한식 : 김치볶음밥 / 양식 : 스파게티 / 라면",
+    message:
+      "오늘의 메뉴는 [한식메뉴 : 김치볶음밥 / 일품메뉴(양식, 일식, 중식) : 스파게티]",
     trigger: "cafeteria",
   },
   {
     id: "cafeteriainfo",
     message:
-      "위치 : 본관1층 / 점심시간 11시~13시 / 저녁시간 17시~19시 / 라면 11시~19시",
+      "가격 3500원 / 14시 이후 라면 배식 가능 / 식당안에 카페와 매점이 있음",
     trigger: "cafeteria",
   },
+  {
+    id: "cafeteriatime",
+    message:
+      "운영시간 학기중 " +
+      "학생식당 (중식, 석식) 11:00 ~ 19:00 (배식가능시간 18:40 까지)" +
+      "교직원 식당 (중식) 11:00 ~ 13:30 (배식가능시간 13:20 까지)" +
+      "방학중 " +
+      "학생식당 (중식, 석식) 11:00 ~ 19:00 (배식가능시간 18:40 까지)",
+    trigger: "cafeteria",
+  },
+
   ///////////////////////////////////예비군/////////////////////////////////
   {
     id: "army",
-    message: "날짜 10월 15일 / 장소 금정역 / 내용 4시간 이론수업",
+    message: "날짜 미정",
+    trigger: "army1",
+  },
+  {
+    id: "army1",
+    message: "훈련내용 : 향방기본훈련 8시간",
+    trigger: "army2",
+  },
+  {
+    id: "army2",
+    message: "훈련장소 : 경기도 의왕시 내손1동 산119번지 (호계 예비군 훈련장)",
+    trigger: "army3",
+  },
+  {
+    id: "army3",
+    message:
+      "훈련장이동 : 학교버스(학교 주차장 훈련당일 08:10까지) / 대중교통 : 금정역 4번출구 훈련당일 08:10까지" +
+      "복귀시에는 학교버스 미운행",
+    trigger: "army4",
+  },
+  {
+    id: "army4",
+    message: "날짜 미정 / 장소 금정역 / 내용 4시간 이론수업",
     trigger: "sections",
   },
+
   ///////////////////////////////////동아리/////////////////////////////////
   {
     id: "club",
@@ -602,67 +647,6 @@ const steps = [
     trigger: "club",
   },
 
-  ///////////////////////////////////교내행사/////////////////////////////////
-  {
-    id: "festival",
-    options: [
-      { value: "party", label: "축제", trigger: "party" },
-      { value: "sportsday", label: "체육대회", trigger: "sportsday" },
-      { value: "OT", label: "오티", trigger: "OT" },
-      { value: "drink", label: "Drink", trigger: "aaa" },
-      { value: "ending", label: "종료", trigger: "ending" },
-    ],
-  },
-  {
-    id: "party",
-    message: "기간 5/12~5/14 / 음식부스 / 동아리공연",
-    trigger: "festival",
-  },
-  {
-    id: "sportsday",
-    message: "기간 10/10~10/12 / 학과별 체육경기 / 동아리공연",
-    trigger: "festival",
-  },
-  {
-    id: "OT",
-    message: "기간 2/22~2/23 / 신입생 오리엔테이션 / 동아리공연 / 학과별 상담",
-    trigger: "festival",
-  },
-
-  ///////////////////////////////////학교정보/////////////////////////////////
-  {
-    id: "university",
-    options: [
-      { value: "university101", label: "학과", trigger: "university101" },
-      { value: "university102", label: "학교시설", trigger: "university102" },
-      { value: "university103", label: "학교위치", trigger: "university103" },
-      { value: "university104", label: "기타", trigger: "university104" },
-      { value: "ending", label: "종료", trigger: "ending" },
-    ],
-  },
-
-  {
-    id: "university101",
-    message:
-      "신학과 기독교교육상담학과  미디어영상광고학과 국제경영학과 경찰행정학과 국제관광학과 영어학과 중국어학과 전자소프트웨어학과 ICT융합학과 산업보안학과 사회복지학과 간호학과 음악학과 공연예술학과 시각정보디자인학과 실내건축디자인학과 섬유패션디자인학과",
-    trigger: "university",
-  },
-  {
-    id: "university102",
-    message: "교내식당 헬스장 서점 복사실 편의점 카페2개 보건소",
-    trigger: "university",
-  },
-  {
-    id: "university103",
-    message: "경기도 군포시 당정동",
-    trigger: "university",
-  },
-  {
-    id: "university104",
-    message: "내용없음",
-    trigger: "university",
-  },
-
   ///////////////////////////////////학교기관/////////////////////////////////
   {
     id: "studentas",
@@ -678,9 +662,26 @@ const steps = [
   {
     id: "student101",
     message:
-      "총학생회는 일한다 / 부서 기획국 홍보국 재정국 교육국 문체국 선교국 예배국 대외협력국 유학국",
+      "총학생회는 학생 자치 기구 중 최고집행기구입니다." +
+      "총학생회(집행부)는 총학생회장, 총학생회부회장, 각 부장 및 각 차장으로 구성됩니다." +
+      "총학생회는 아래의 각 집행국을 두고있습니다.",
+    trigger: "student101-1",
+  },
+  {
+    id: "student101-1",
+    message:
+      "기획국 : 본회의 행정, 사무, 행사, 계획운영, 각종 회의 개최 및 일련의 사무에 관한 사항" +
+      "홍보국 : 본회의 홍보에 관한 사항" +
+      "재정국 : 본회의 경리, 회계에 과한 사항" +
+      "교육국 : 본회의 전반적인 학술활동에 관한 사항" +
+      "문체국 : 문화 및 체육행사에 관한 사항" +
+      "선교국 : 대내·외 선교활동 및 전도에 관한 사항" +
+      "예배국 : 교회교육 및 예배에 관한 사항" +
+      "대외협력국 : 대외 제휴 업체, 학교, 학생 복지에 관한 사항" +
+      "유학국 : 학생들의 단기 유학, 학점교류에 관한 사항",
     trigger: "studentas",
   },
+
   {
     id: "student102",
     message: "대의원회는 장부감사한다",
@@ -695,6 +696,175 @@ const steps = [
     id: "student104",
     message: "동아리연합회는 일한다",
     trigger: "studentas",
+  },
+
+  ///////////////////////////////////교내행사/////////////////////////////////
+  {
+    id: "festival",
+    options: [
+      { value: "party", label: "축제", trigger: "party" },
+      { value: "sportsday", label: "체육대회", trigger: "sportsday" },
+      { value: "OT", label: "오리엔테이션", trigger: "OT" },
+      { value: "launching", label: "발대식", trigger: "launching" },
+      { value: "graduate", label: "졸업식", trigger: "graduate" },
+      { value: "ending", label: "종료", trigger: "ending" },
+    ],
+  },
+  {
+    id: "party",
+    message:
+      "기간 : 5/12~5/13, 내용 : 음식부스 / 동아리공연 / 연예인공연 / 놀이기구운영",
+    trigger: "festival",
+  },
+  {
+    id: "sportsday",
+    message: "기간 : 10/16, 내용 : 학과별 체육경기",
+    trigger: "festival",
+  },
+  {
+    id: "OT",
+    message:
+      "기간 : 2/18~2/19, 내용 : 신입생 오리엔테이션 / 동아리공연 / 연예인공연 / 교수님면담",
+    trigger: "festival",
+  },
+  {
+    id: "launching",
+    message: "기간 : 미정, 내용 : 학회 및 4대기관 출범식 / 상품추첨",
+    trigger: "festival",
+  },
+  {
+    id: "graduate",
+    message: "기간: 미정, 내영 : 학위수여",
+    trigger: "festival",
+  },
+
+  ///////////////////////////////////학사정보/////////////////////////////////
+  {
+    id: "schoolinfo",
+    options: [
+      { value: "501", label: "성적", trigger: "501" },
+      { value: "502", label: "졸업", trigger: "502" },
+      { value: "503", label: "휴학/복학", trigger: "503" },
+      { value: "504", label: "수강신청", trigger: "504" },
+      { value: "505", label: "사이버강의", trigger: "505" },
+      { value: "506", label: "계절학기", trigger: "506" },
+      { value: "507", label: "전과", trigger: "507" },
+      { value: "ending", label: "종료", trigger: "ending" },
+    ],
+  },
+  {
+    id: "501",
+    message:
+      "성적평가 : 시험성적, 과제물, 출석, 수시평가 등에 의해 종합적으로 평가 / 과목별 수업시수의 4분의 1이상 결석한 자는 F로 처리함" +
+      "평가방법 : 성적평가는 상대평가를 원칙으로 함 (단, 수강인원 9명 이하의 경우, 계약학과 및 비트교육센터에서 개설하는 교과목은 예외로 할 수 있다.) ",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "502",
+    message: "2",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "503",
+    message: "3",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "504",
+    message: "4",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "505",
+    message: "5",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "506",
+    message: "6",
+    trigger: "schoolinfo",
+  },
+  {
+    id: "507",
+    message: "7",
+    trigger: "schoolinfo",
+  },
+
+  ///////////////////////////////////기숙사/////////////////////////////////
+  {
+    id: "dormitory",
+    options: [
+      { value: "601", label: "위치", trigger: "601" },
+      { value: "602", label: "금액", trigger: "601" },
+      { value: "603", label: "신청기간", trigger: "603" },
+      { value: "604", label: "발표날짜", trigger: "604" },
+      { value: "ending", label: "종료", trigger: "ending" },
+    ],
+  },
+  {
+    id: "601",
+    message: "영상비젼센터 / 비젼관",
+    trigger: "dormitory",
+  },
+  {
+    id: "602",
+    message: "2",
+    trigger: "dormitory",
+  },
+  {
+    id: "603",
+    message: "3",
+    trigger: "dormitory",
+  },
+  {
+    id: "604",
+    message: "4",
+    trigger: "dormitory",
+  },
+
+  ///////////////////////////////////학교정보/////////////////////////////////
+  {
+    id: "university",
+    options: [
+      { value: "701", label: "학교정보", trigger: "701" },
+      { value: "702", label: "학교위치", trigger: "702" },
+      { value: "703", label: "학과정보", trigger: "703" },
+      { value: "704", label: "학교시설", trigger: "704" },
+      { value: "705", label: "교내전화번호", trigger: "705" },
+      { value: "ending", label: "종료", trigger: "ending" },
+    ],
+  },
+
+  {
+    id: "701",
+    message: "교화 : 백합, 총장 : 김성혜",
+    trigger: "university",
+  },
+  {
+    id: "702",
+    message: "경기도 군포시 한세로30",
+    trigger: "university",
+  },
+  {
+    id: "703",
+    message:
+      "신학과 기독교교육상담학과  미디어영상광고학과 국제경영학과 경찰행정학과 국제관광학과 영어학과 중국어학과 전자소프트웨어학과 ICT융합학과 산업보안학과 사회복지학과 간호학과 음악학과 공연예술학과 시각정보디자인학과 실내건축디자인학과 섬유패션디자인학과",
+    trigger: "university",
+  },
+  {
+    id: "704",
+    message: "교내식당 헬스장 서점 복사실 편의점 카페3개 보건소 도서관",
+    trigger: "university",
+  },
+  {
+    id: "705",
+    message: "대학일자리센터",
+    trigger: "705-1",
+  },
+  {
+    id: "705-1",
+    message: "대학일자리센터장 031-450-9831",
+    trigger: "university",
   },
 
   ///////////////////////////////엔딩////////////////////////////
