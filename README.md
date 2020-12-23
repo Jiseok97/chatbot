@@ -1,4 +1,4 @@
-![Hansei-chatbot](https://user-images.githubusercontent.com/64394744/102717691-37918000-4327-11eb-8917-8dee8cc92a31.png)
+![HanseiBTS](https://user-images.githubusercontent.com/64394744/102977978-1d35ed00-4547-11eb-9166-54ab6f8a2469.PNG)
 
 # Hansei Chatbot
 
@@ -7,3 +7,7 @@ Update 2020!! (by Jiseok)
 ## Development
 
 Use react-simple-chatbot
+
+### Developer
+
+NetLee(97)

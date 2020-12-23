@@ -12,6 +12,9 @@
 # Open source
 .KushyApi
 
+# Will improve functionality
+.Login
+
 # misc
 .DS_Store
 .env.local
