@@ -19,8 +19,8 @@
 .env.test.local
 .env.production.local
 .env
-.steps
-.KushyApi
+/src/config/steps
+/src/KushyApi
 
 npm-debug.log*
 yarn-debug.log*
