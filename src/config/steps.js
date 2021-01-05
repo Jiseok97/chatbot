@@ -5,7 +5,17 @@ import KushyApi from "../KushyApi";
 const steps = [
   {
     id: "1",
-    message: "안녕하세요 한세대학교 챗봇입니다. 무엇을 도와드릴까요?",
+    message: "안녕하세요 한세대학교 챗봇입니다. :) 이름이 무엇인가요?",
+    trigger: "name",
+  },
+  {
+    id: "name",
+    user: true,
+    trigger: "3",
+  },
+  {
+    id: "3",
+    message: "네, {previousValue}학우님, 무엇을 도와드릴까요?",
     trigger: "sections",
   },
 
@@ -13,6 +23,7 @@ const steps = [
     id: "sections",
     options: [
       { value: "scholarship", label: "장학금", trigger: "scholarship1" },
+      { value: "official", label: "총학공지", trigger: "official1" },
       { value: "cafeteria", label: "학식", trigger: "cafeteria0" },
       { value: "club", label: "동아리", trigger: "club" },
       { value: "festival", label: "교내행사", trigger: "festival" },
@@ -670,6 +681,47 @@ const steps = [
     trigger: "scholarship",
   },
 
+  ///////////////////////////////////총학공지/////////////////////////////////
+  {
+    id: "official1",
+    message: "총학공지입니다.",
+    trigger: "official2",
+  },
+  {
+    id: "official2",
+    message: "총학생회 카카오톡 플러스친구 - 계정 이전 안내",
+    trigger: "official3",
+  },
+  {
+    id: "official3",
+    message: "아이디 : hansei_council1",
+    trigger: "official4",
+  },
+  {
+    id: "official4",
+    message: "링크 : http://pf.kakao.com/_xcpLrK",
+    trigger: "official5",
+  },
+
+  {
+    id: "official5",
+    options: [
+      { value: "facebook", label: "총학생회 SNS", trigger: "facebook" },
+      { value: "ending", label: "이전으로", trigger: "sections" },
+    ],
+  },
+  {
+    id: "facebook",
+    message:
+      "총학생회 페이스북 : https://www.facebook.com/profile.php?id=100008037458321",
+    trigger: "kakao",
+  },
+  {
+    id: "kakao",
+    message: "총학생회 카카오톡 : http://pf.kakao.com/_xcpLrK",
+    trigger: "official5",
+  },
+
   ///////////////////////////////////학식/////////////////////////////////
   {
     id: "cafeteria0",
@@ -681,7 +733,7 @@ const steps = [
     options: [
       { value: "menu", label: "메뉴", trigger: "menu" },
       { value: "cafeteriainfo", label: "정보", trigger: "cafeteriainfo" },
-      { value: "ending", label: "운영시간", trigger: "cafeteriatime" },
+      { value: "cafeteriatime", label: "운영시간", trigger: "cafeteriatime" },
       { value: "ending", label: "이전으로", trigger: "sections" },
     ],
   },
