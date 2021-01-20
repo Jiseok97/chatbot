@@ -10,4 +10,4 @@ Use react-simple-chatbot
 
 ### Developer
 
-NetLee(97)
+netLee(97)
